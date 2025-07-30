@@ -19,7 +19,7 @@ jobs:
         with:
           targets: wasm32-unknown-unknown
       - name: Install dioxus
-        run: cargo install dioxus-cli
+        run: cargo binstall -y dioxus-cli
       - name: Bundle for web
         run: dx bundle --platform web
       - name: Add CNAME
