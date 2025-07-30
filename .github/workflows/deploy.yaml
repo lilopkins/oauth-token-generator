@@ -1,0 +1,32 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Prepare Rust environment
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-unknown-unknown
+      - name: Install dioxus
+        run: cargo install dioxus-cli
+      - name: Bundle for web
+        run: dx bundle --platform web
+      - name: Add CNAME
+        run: |
+          echo "token.hpkns.uk" > ./target/dx/oauth-token-generator/release/web/public/CNAME
+      - name: Deploy to Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./target/dx/oauth-token-generator/release/web/public
