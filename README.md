@@ -10,7 +10,7 @@ project/
 │  ├─ main.rs # The entrypoint for the app.
 │  ├─ components/
 │  │  ├─ mod.rs # Defines the components module
-│  │  ├─ hero.rs # The Hero component for use in the home page
+│  │  ├─ form.rs # The Form component for use in the home page
 ├─ Cargo.toml # The Cargo.toml file defines the dependencies and feature flags for your project
 ```
 
@@ -20,7 +20,7 @@ project/
 3. Run the following command in the root of the project to start the Tailwind CSS compiler:
 
 ```bash
-npx tailwindcss -i ./tailwind.css -o ./assets/tailwind.css --watch
+npx @tailwindcss/cli -i ./tailwind.css -o ./assets/tailwind.css --watch
 ```
 
 ### Serving Your App

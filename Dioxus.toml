@@ -3,7 +3,7 @@
 [web.app]
 
 # HTML title tag content
-title = "oauth-token-generator"
+title = "OAuth 2 Basic Token Generator"
 
 # include `assets` in web platform
 [web.resource]
