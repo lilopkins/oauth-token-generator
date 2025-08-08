@@ -12,7 +12,8 @@ mod components;
 const FAVICON: Asset = asset!("/assets/favicon.ico");
 // The asset macro also minifies some assets like CSS and JS to make bundled smaller
 const MAIN_CSS: Asset = asset!("/assets/styling/main.css");
-const TAILWIND_CSS: Asset = asset!("/assets/tailwind.css");
+const THEME_CSS: Asset = asset!("/assets/styling/theme.css");
+const CUSTOM_CSS: Asset = asset!("/assets/styling/custom.css");
 
 fn main() {
     // The `launch` function is the main entry point for a dioxus app. It takes a component and renders it with the platform feature
@@ -32,7 +33,8 @@ fn App() -> Element {
         // we are using the `document::Link` component to add a link to our favicon and main CSS file into the head of our app.
         document::Link { rel: "icon", href: FAVICON }
         document::Link { rel: "stylesheet", href: MAIN_CSS }
-        document::Link { rel: "stylesheet", href: TAILWIND_CSS }
+        document::Link { rel: "stylesheet", href: THEME_CSS }
+        document::Link { rel: "stylesheet", href: CUSTOM_CSS }
 
         Form {}
     }

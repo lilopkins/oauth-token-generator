@@ -1,6 +1,6 @@
 [package]
 name = "oauth-token-generator"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["Lily Hopkins <lily@hpkns.uk>"]
 edition = "2021"
 
@@ -8,7 +8,10 @@ edition = "2021"
 
 [dependencies]
 base64 = "0.22.1"
-dioxus = { version = "0.6.0", features = [] }
+dioxus = { version = "=0.7.0-alpha.3", features = [] }
+dioxus-primitives = { git = "https://github.com/DioxusLabs/components", version = "0.0.1" }
+
+[patch.crates-io]
 
 [features]
 default = ["web"]
