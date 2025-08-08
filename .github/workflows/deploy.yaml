@@ -21,7 +21,7 @@ jobs:
       - name: Install dioxus
         run: |
           cargo install cargo-binstall
-          cargo binstall -y dioxus-cli
+          cargo binstall -y dioxus-cli@0.7.0-alpha.3
       - name: Bundle for web
         run: dx bundle --platform web
       - name: Add CNAME
