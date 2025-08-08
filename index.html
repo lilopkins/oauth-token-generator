@@ -1,25 +1,13 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>OAuth 2 Basic Token Generator</title>
-    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta charset="UTF-8" />
-  <link rel="preload" as="script" href="/./assets/oauth-token-generator-51d74893d8c87e4e.js" crossorigin><link rel="preload" as="fetch" type="application/wasm" href="/./assets/oauth-token-generator_bg-de6735d501f268b8.wasm" crossorigin></head>
-  <body>
-    <div id="main"></div>
-  <script>
-            // We can't use a module script here because we need to start the script immediately when streaming
-            import("/./assets/oauth-token-generator-51d74893d8c87e4e.js").then(
-                ({ default: init }) => {
-                init("/./assets/oauth-token-generator_bg-de6735d501f268b8.wasm").then((wasm) => {
-                    if (wasm.__wbindgen_start == undefined) {
-                    wasm.main();
-                    }
-                });
-                }
-            );
-            </script>
-            
+    <head>
+        <title>OAuth 2 Basic Token Generator</title>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+    <link rel="preload" as="script" href="/./assets/oauth-token-generator-dxh4d127db7542e36bd.js" crossorigin><link rel="preload" as="fetch" type="application/wasm" href="/./assets/oauth-token-generator_bg-dxh6b2f2e14446db278.wasm" crossorigin></head>
+    <body>
+        <div id="main"></div>
+    <script type="module" async src="/./assets/oauth-token-generator-dxh4d127db7542e36bd.js"></script>
             </body>
 </html>
